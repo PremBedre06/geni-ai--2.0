@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'RasikProfile.dart'; // Import the RasikProfile page
+
 class SearchPage extends StatefulWidget {
 	const SearchPage({super.key});
 	@override
@@ -75,7 +77,7 @@ class SearchPageState extends State<SearchPage> with SingleTickerProviderStateMi
 															crossAxisAlignment: CrossAxisAlignment.start,
 															children: [
 																IntrinsicHeight(
-																	child: Container(
+																	child: SizedBox(
 																		width: double.infinity,
 																		child: Column(
 																			crossAxisAlignment: CrossAxisAlignment.start,
@@ -88,7 +90,7 @@ class SearchPageState extends State<SearchPage> with SingleTickerProviderStateMi
 																						child: Row(
 																							children: [
 																								Expanded(
-																									child: Container(
+																									child: SizedBox(
 																										width: double.infinity,
 																										child: Text(
 																											"Rasik",
@@ -209,7 +211,7 @@ class SearchPageState extends State<SearchPage> with SingleTickerProviderStateMi
 																							children: [
 																								Expanded(
 																									child: IntrinsicHeight(
-																										child: Container(
+																										child: SizedBox(
 																											width: double.infinity,
 																											child: Column(
 																												crossAxisAlignment: CrossAxisAlignment.start,
@@ -314,7 +316,7 @@ class SearchPageState extends State<SearchPage> with SingleTickerProviderStateMi
 																							children: [
 																								Expanded(
 																									child: IntrinsicHeight(
-																										child: Container(
+																										child: SizedBox(
 																											width: double.infinity,
 																											child: Column(
 																												crossAxisAlignment: CrossAxisAlignment.start,
@@ -419,7 +421,7 @@ class SearchPageState extends State<SearchPage> with SingleTickerProviderStateMi
 																							children: [
 																								Expanded(
 																									child: IntrinsicHeight(
-																										child: Container(
+																										child: SizedBox(
 																											width: double.infinity,
 																											child: Column(
 																												crossAxisAlignment: CrossAxisAlignment.start,
@@ -524,7 +526,7 @@ class SearchPageState extends State<SearchPage> with SingleTickerProviderStateMi
 																							children: [
 																								Expanded(
 																									child: IntrinsicHeight(
-																										child: Container(
+																										child: SizedBox(
 																											width: double.infinity,
 																											child: Column(
 																												crossAxisAlignment: CrossAxisAlignment.start,
@@ -625,7 +627,7 @@ class SearchPageState extends State<SearchPage> with SingleTickerProviderStateMi
 																	),
 																),
 																IntrinsicHeight(
-																	child: Container(
+																	child: SizedBox(
 																		width: double.infinity,
 																		child: Column(
 																			crossAxisAlignment: CrossAxisAlignment.start,
@@ -676,19 +678,27 @@ class SearchPageState extends State<SearchPage> with SingleTickerProviderStateMi
 																									  ),
 																								  ),
 																								  Expanded(
-																									  child: Column(
-																										  mainAxisAlignment: MainAxisAlignment.center,
-																										  children: [
-																											  Icon(Icons.person_outline, color: Colors.black54, size: 28),
-																											  Text(
-																												  "Profile",
-																												  style: TextStyle(
-																													  color: Colors.black54,
-																													  fontSize: 12,
-																													  fontWeight: FontWeight.bold,
+																									  child: InkWell(
+																										  onTap: () {
+																											  Navigator.push(
+																												context,
+																												MaterialPageRoute(builder: (context) => const RasikProfile()),
+																											  );
+																										  },
+																										  child: Column(
+																											  mainAxisAlignment: MainAxisAlignment.center,
+																											  children: [
+																												  Icon(Icons.person_outline, color: Colors.black54, size: 28),
+																												  Text(
+																													  "Profile",
+																													  style: TextStyle(
+																														  color: Colors.black54,
+																														  fontSize: 12,
+																														  fontWeight: FontWeight.bold,
+																													  ),
 																												  ),
-																											  ),
-																										  ],
+																											  ],
+																										  ),
 																									  ),
 																								  ),
 																							  ],

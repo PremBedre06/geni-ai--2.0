@@ -4,6 +4,7 @@ import 'landing_screen.dart'; // Adjust import path as needed
 
 import 'SearchPage.dart';
 import 'depth0_frame0_screen.dart';
+import 'RasikProfile.dart'; // Import the RasikProfile page
 
 class LatestArtwork extends StatefulWidget {
   const LatestArtwork({super.key});
@@ -20,6 +21,11 @@ class _LatestArtworkState extends State<LatestArtwork> {
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => const SearchPage()),
+      );
+    } else if (index == 2) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const RasikProfile()),
       );
     } else {
       setState(() {

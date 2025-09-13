@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'digital_personal_dashboard.dart';
 import 'upload_page.dart';
-import 'pre_post_overview.dart';
 
 class ShowroomSetup extends StatefulWidget {
   const ShowroomSetup({super.key});
